@@ -8,8 +8,8 @@
             "肥肥",
             "巴清商店",
             "吕不韦商店",
-            "左慈",
             "十常侍",
+            "左慈",
             "事件",
             "狗卡"
         ],
@@ -126,6 +126,8 @@
     "继续挑战": {
         "recognition": "OCR",
         "action": "Click",
+        "repeat": 2,
+        "repeat_delay": 200,
         "expected": "继续挑战",
         "next": [
             "选择战斗或事件"
@@ -137,6 +139,7 @@
     "开始挑战": {
         "recognition": "FeatureMatch",
         "action": "Click",
+        "pre_delay": 1000,
         "template": [
             "开始挑战.png"
         ],
@@ -295,6 +298,7 @@
     "肥肥事件2": {
         "recognition": "OCR",
         "action": "Click",
+        "pre_delay": 1000,
         "expected": [
             "战斗",
             "讨价还价",
@@ -498,6 +502,7 @@
         ],
         "recognition": "FeatureMatch",
         "repeat": 2,
+        "repeat_delay": 500,
         "action": "Click",
         "template": [
             "事件.png"
@@ -513,7 +518,10 @@
         "recognition": "OCR",
         "action": "Click",
         "expected": [
+            "出力",
+            "假意应允",
             "速度+",
+            "另寻他人",
             "太平钱",
             "战法伤害+",
             "杀的伤害+",
@@ -561,7 +569,9 @@
             "吕不韦商店.png"
         ],
         "next": [
-            "吕不韦返回",
+            "吕不韦返回"
+        ],
+        "on_error": [
             "单击屏幕"
         ],
         "focus": {
@@ -585,7 +595,9 @@
             "巴清商店.png"
         ],
         "next": [
-            "巴清返回",
+            "巴清返回"
+        ],
+        "on_error": [
             "单击屏幕"
         ],
         "focus": {
@@ -606,6 +618,7 @@
     "吕不韦返回": {
         "recognition": "OCR",
         "action": "Click",
+        "pre_delay": 1000,
         "expected": [
             "吕不韦小铺子"
         ],
@@ -628,6 +641,7 @@
     "巴清返回": {
         "recognition": "OCR",
         "action": "Click",
+        "pre_delay": 1000,
         "expected": [
             "巴清小铺子"
         ],
